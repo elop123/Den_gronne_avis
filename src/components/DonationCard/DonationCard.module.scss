@@ -1,0 +1,28 @@
+@use '../../helpers/variables' as *;
+
+.donationSection{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $white;
+    font-family: $font-family;
+    min-height: 160px;
+    width: 100%;
+.title{
+    font-size: 30px;
+    padding: 1rem 3rem;
+}
+.subtitle{
+    padding: 2px 3rem;
+}
+.sum{
+    color:$light_green;
+    font-size: 30px;
+    text-align: end;
+    padding: 1rem;
+}
+.subtext{
+    padding: 2px 3rem;
+    margin-bottom: 12px;
+}
+}

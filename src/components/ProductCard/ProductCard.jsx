@@ -46,8 +46,8 @@ useEffect(() => {
                 product.slice(0,6).map((item) => (
                 <img key={item.id} 
                     className={style.product_img}
-                     src={item.image} 
-                     alt='product_img'></img> 
+                    src={item.image} 
+                    alt='product_img'></img> 
             ))
         ) : (
           <p>No product available</p>

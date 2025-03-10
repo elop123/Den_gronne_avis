@@ -11,11 +11,13 @@
     font-size: 28px;
     text-align: center;
     height: 120px;
+    font-family: 'Roboto';
+    margin-bottom: 6rem;
 .logo{
     display: flex;
     align-items: right;
     border: 2px solid $logo_green;
-    font-family: $font-family;
+    font-family: 'Roboto';
     .greenSide{
     background-color: $logo_green;
     color: $white;

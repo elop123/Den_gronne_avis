@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import style from './CategoryCard.module.scss'
-import { Title } from '../Title/Title';
 
 
 export const CategoryCard = () => {
@@ -42,13 +41,14 @@ useEffect(() => {
   }
 
   return (
-    <section>
-          <Title title="Populære kategorier" />
+    <section className={style.categoryCard}>
         {category.length > 0 ? (
             category.slice(0,6).map((item) => (
             <article key={item.id}>
-                <p>{item.name}</p>
-                <img src={item.category_image} alt="category_img" />
+                <p className={style.categotyTitle}>{item.name}</p>
+                <img src={item.category_image} 
+                     className={style.category_img}
+                     alt="category_img" />
             </article> 
             ))
         ) : (
