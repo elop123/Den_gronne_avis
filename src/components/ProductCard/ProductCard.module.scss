@@ -1,0 +1,13 @@
+@use '../../helpers/variables' as *;
+
+.productCard{
+    display: flex;
+    gap:18px;
+    width: 80%;
+   margin: auto;
+ .product_img{
+    width: 148px;
+    height: 148px;
+    margin: auto;
+ }
+}
