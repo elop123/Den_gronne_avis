@@ -12,7 +12,7 @@ const handleMessage = () => {
 
   return (
    <section className={style.messageSection}>
-    <h2>Kontakt sælger</h2>
+    <h2 className={style.messageTitle}>Kontakt sælger</h2>
     <textarea className={style.inputBox}
         placeholder="Skriv en besked til sælger..."
         value={message}

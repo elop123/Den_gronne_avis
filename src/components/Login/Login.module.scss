@@ -1,0 +1,61 @@
+@use "../../helpers/variables" as *;
+
+.loginBox{
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  font-family:'Roboto';
+ // text-align: center;
+ //margin-bottom: 6rem;
+.title{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.emailSection, .passwordSection{
+    display: flex;
+    border: 1.5px solid $light_green;
+    padding: 10px;
+    background-color: white;
+}
+.label{
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.loginInput{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding-right: 10px;
+  color: $logo_green 50%;
+}
+.loginIcon{
+width: 20px;
+height: 20px;
+margin-left: 10px;
+color: lightgray 50%;
+}
+.btnLogin{
+    padding: 10px 24px;
+    background-color: $logo_green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+}
+
+
+
+
+
+
+
+
+

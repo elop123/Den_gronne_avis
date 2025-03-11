@@ -5,6 +5,7 @@ import { MainLayout } from "./layout/MainLayout"
 import { CategoryPage } from "./pages/CategoryPage"
 import './App.css'
 import { ProductPageDetails } from "./pages/ProductPageDetails"
+import { LoginPage } from "./pages/LoginPage"
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
     <Route path="products" element={<ProductsPage/>} />
     <Route path="products/:slug" element={<ProductPageDetails />} />
     <Route path="products/category/:slug" element={<CategoryPage />} />
+    <Route path="/login" element={<LoginPage />} />
+
     
     </Route>
     </Routes>
