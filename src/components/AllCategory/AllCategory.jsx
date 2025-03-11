@@ -1,14 +1,12 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import style from './ProductCard.module.scss'
-import { useNavigate } from 'react-router-dom'
+import style from './AllCategory.module.scss'
 
-export const ProductCard = () => {
+
+export const AllCategory = () => {
 const[product, setProduct] = useState([])
 const[error, setError] = useState(null)
 const[loading, setLoading] = useState(true)
-
-const navigate = useNavigate()
 
 const url = `http://localhost:4242/products`;
 
@@ -23,8 +21,8 @@ useEffect(() => {
       .then((data) => {
         console.log("Data:", data); 
 
-        if (!data ) {
-            setError("No products found");
+        if (!data || !Array.isArray(data.data) || data.data.length === 0) {
+            setError("No product found");
           } else {
             setProduct(data.data); 
           }
@@ -42,16 +40,14 @@ useEffect(() => {
   }
     
   return (
-    <section className={style.productCard}>
+    <section className={style.allCategory}>
         
         {product.length > 0 ? (
-                product.slice(0,6).map((item) => (
+                product.map((item) => (
                 <img key={item.id} 
                     className={style.product_img}
                     src={item.image} 
-                    alt='product_img'
-                    onClick={() => navigate(`/products/${item.slug}`)}
-                    ></img> 
+                    alt='product_img'></img> 
             ))
         ) : (
           <p>No product available</p>

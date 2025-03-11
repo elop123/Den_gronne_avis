@@ -1,0 +1,29 @@
+@use "../../helpers/variables" as *;
+
+.productStyle{
+    margin: auto;
+    padding: 1rem 2rem;
+    .productImg{
+        width: 545px;
+        height:406px;
+       
+        }
+        .productTitle{
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 36px;
+        padding: 0px 1rem;
+        }
+        .productDescription{
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 14px;
+        padding: 1rem;
+        }
+        .productPrice{
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 20px;
+        padding: 1rem;
+        }
+}

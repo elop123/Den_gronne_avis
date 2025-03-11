@@ -8,11 +8,12 @@ import { Separator } from '../components/Separator/Separator'
 import { Title } from '../components/Title/Title'
 import img1 from '../assets/images/banner_image2.jpg'
 import img2 from '../assets/images/banner_image3.jpg'
+import { MainSeparator } from '../components/Separator/MainSeparator'
 
 export const FrontPage = () => {
   return (
     <>
-    <Separator />
+    <MainSeparator />
     <Title title="Udvagte Produkter" />
     <ProductCard/>
     <Separator />

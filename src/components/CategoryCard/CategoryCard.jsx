@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import style from './CategoryCard.module.scss'
 
 
@@ -7,6 +8,8 @@ export const CategoryCard = () => {
 const[category,setCategory]= useState([]);
 const[loading, setLoading] = useState(true);
 const[error, setError] = useState(null);
+
+const navigate = useNavigate()
 
 const url=`http://localhost:4242/categories`;
 
@@ -44,7 +47,7 @@ useEffect(() => {
     <section className={style.categoryCard}>
         {category.length > 0 ? (
             category.slice(0,6).map((item) => (
-            <article key={item.id}>
+            <article key={item.id} >
                 <p className={style.categotyTitle}>{item.name}</p>
                 <img src={item.category_image} 
                      className={style.category_img}

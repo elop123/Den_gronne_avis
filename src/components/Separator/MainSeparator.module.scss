@@ -1,0 +1,11 @@
+@use '../../helpers/variables' as *;
+
+.separator{
+width: 980px;
+height: 4px;
+top: 228px;
+left: 153px;
+background-color: $logo_green;
+margin: auto;
+margin-top: 104px;
+}

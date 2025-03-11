@@ -1,0 +1,18 @@
+@use "../../helpers/variables" as *;
+
+.categoryTitle{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 60px;
+    margin-top: 40px;
+}
+.categoryList{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 4px;
+    margin-left: 70px;
+    list-style-type: none;
+}
