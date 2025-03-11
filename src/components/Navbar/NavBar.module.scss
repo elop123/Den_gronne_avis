@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 32px;
+    padding: 16px 40px;
     font-family: $font-family;
     font-weight: 400;
     font-size: 28px;
@@ -15,9 +15,9 @@
     margin-bottom: 6rem;
 .logo{
     display: flex;
-    align-items: right;
     border: 2px solid $logo_green;
     font-family: 'Roboto';
+    text-decoration: none;
     .greenSide{
     background-color: $logo_green;
     color: $white;
@@ -42,14 +42,18 @@
         left: 915px;
         border: none;
         color: $white;
+        cursor: pointer;
+        &:hover{
+          background-color: $logo_green;
+        }
         
     }
-    .icons{
-        display: flex;
+    .navIcons{
         gap: 8px;
         color: $lightGray;
         opacity: 0.5;
-        margin: 1rem;
+        margin-top: 0.5rem;  
+        cursor: pointer;
     }
 }
 

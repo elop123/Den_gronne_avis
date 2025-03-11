@@ -1,11 +1,34 @@
+@use "../../helpers/variables" as *;
+
 .categoryCard{
-    display: flex;
-    gap:18px;
-    width: 80%;
+   display: flex;
+   gap:18px;
+   width: 78%;
    margin: auto;
- .category_img{
-    width: 150px;
-    height: 150px;
-    margin: auto;
- }
+   margin-bottom: 2rem;
+.card{
+   position: relative;
+   &:hover{
+      transform: scale(1.1);
+      box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2);
+   }
+   .category_img{
+      display: block;
+      width: 150px;
+      height: 130px;
+      margin: auto;
+      object-fit: cover;
+      cursor: pointer; 
+   }
+   .categoryTitle{
+      color:$white;
+      text-decoration:underline ;
+      background-color:$light_green ;
+      text-align: center;
+      padding: 0.6rem;
+      font-family: $font-family;
+      cursor: pointer;
+   }
+}   
+
 }

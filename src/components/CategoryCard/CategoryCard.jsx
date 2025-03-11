@@ -47,8 +47,8 @@ useEffect(() => {
     <section className={style.categoryCard}>
         {category.length > 0 ? (
             category.slice(0,6).map((item) => (
-            <article key={item.id} >
-                <p className={style.categotyTitle}>{item.name}</p>
+            <article key={item.id} className={style.card}>
+                <p className={style.categoryTitle}>{item.name}</p>
                 <img src={item.category_image} 
                      className={style.category_img}
                      alt="category_img" />

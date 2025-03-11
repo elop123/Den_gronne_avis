@@ -21,6 +21,7 @@ export const FrontPage = () => {
     <Separator />
     <Title title="Populære Kategorier" />
     <CategoryCard />
+    <Separator />
     <div className={style.donationCards}>
     <DonationCard title="Donationer til Dato" 
                   text="Sammen med dig har vi siden starten indsamle"

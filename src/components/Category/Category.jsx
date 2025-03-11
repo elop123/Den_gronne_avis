@@ -57,7 +57,7 @@ if (selectedSlug === "all") {
   return (
     <section className={style.category}>
             <select className={style.dropdown} onChange={handleCategory}>
-                <option value="category">Vælg kategori</option>
+                <option value="category" className={style.categoryOption}>vælg kategori</option>
                 <option value="all">Alle kategori</option>
                 {category.length > 0 ? (
                  category.map((item) => (

@@ -46,12 +46,19 @@ useEffect(() => {
         
         {product.length > 0 ? (
                 product.slice(0,6).map((item) => (
+                <div  key={item.id} 
+                className={style.productContainer}
+                onClick={() => navigate(`/products/${item.slug}`)}>
                 <img key={item.id} 
                     className={style.product_img}
                     src={item.image} 
                     alt='product_img'
-                    onClick={() => navigate(`/products/${item.slug}`)}
-                    ></img> 
+                    onClick={() => navigate(`/products/${item.slug}`)}>
+                </img> 
+                 <div className={style.overlay}>
+                 <p>{item.name}</p>
+               </div>
+               </div>
             ))
         ) : (
           <p>No product available</p>

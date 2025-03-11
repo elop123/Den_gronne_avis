@@ -44,10 +44,19 @@ useEffect(() => {
         
         {product.length > 0 ? (
                 product.slice(0,9).map((item) => (
+              <article className={style.all}>
+                <div className={style.imageContainer}>
                 <img key={item.id} 
                     className={style.productImg}
                     src={item.image} 
                     alt='product_img'></img> 
+                  <div className={style.priceOverlay}>
+                  <p>Pris: {item.price} kr</p>
+                  </div>
+                </div>
+                <h3>{item.name}</h3>
+                <p>{item.description}</p>
+              </article>
             ))
         ) : (
           <p>No product available</p>

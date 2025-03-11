@@ -1,10 +1,21 @@
 @use "../../helpers/variables" as *;
 
-.dropdown{
-    width: 200px;
-    height: 44.6px;
-    top: 41.33px;
-    left: 686px;
-    border: 2px solid $light_green;
+.category{
+    .dropdown{
+        width: 200px;
+        height: 44.6px;
+        top: 41.33px;
+        left: 686px;
+        border: 2px solid $light_green;
+        cursor: pointer;
+        &:active{
+            border:2px solid $light_green;
+        }
+        .categoryOption{
+            text-align: left;
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+    }
     
 }
