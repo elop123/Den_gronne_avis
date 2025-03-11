@@ -55,7 +55,7 @@ useEffect(() => {
                      alt="product_img" />
                 <h3 className={style.productTitle}>{productById?.name}</h3>
                 <p className={style.productDescription}>{productById?.description}</p>
-                <p className={style.productPrice}>Pris: {productById?.price} kr</p>
+                <p className={style.productPrice}>Pris: {productById?.price} Dkk</p>
             </article> 
        
     </section>
