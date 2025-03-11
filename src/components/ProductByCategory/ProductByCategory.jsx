@@ -49,14 +49,14 @@ useEffect(() => {
 
   return (
     <section className={style.productByCategory}>
-        <h2>Products in Category: {slug}</h2>
+       
         {products.length > 0 ? (
             products.map((item) => (
             <article key={item.id}  onClick={() => navigate(`/products/${item.slug}`)}>
-                <img src={item.image} alt="product_img" />
-                <h3>{item.name}</h3>
-                <p>{item.description}</p>
-                <p>{item.price} DKK</p>
+                <img src={item.image} alt="product_img" className={style.productImg}/>
+                <h3 className={style.productTitle}>{item.name}</h3>
+                <p className={style.productDesc}>{item.description}</p>
+                
             </article> 
             ))
         ) : (

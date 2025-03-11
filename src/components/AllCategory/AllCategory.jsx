@@ -43,9 +43,9 @@ useEffect(() => {
     <section className={style.allCategory}>
         
         {product.length > 0 ? (
-                product.map((item) => (
+                product.slice(0,9).map((item) => (
                 <img key={item.id} 
-                    className={style.product_img}
+                    className={style.productImg}
                     src={item.image} 
                     alt='product_img'></img> 
             ))

@@ -43,13 +43,16 @@ useEffect(() => {
     return <p className={style.error}>{error}</p>;
   }
 
-  const handleCategory =(e)=>{
-    const selectedSlug= e.target.value
+const handleCategory = (e) => {
+  const selectedSlug = e.target.value;
 
-  if (selectedSlug !== 'category' && selectedSlug !== 'all') {
-  navigate(`products/category/${selectedSlug}`);
-  }
-  }
+if (selectedSlug === "all") {
+  navigate("/products")
+} else if (selectedSlug !== "category") {
+  navigate(`/products/category/${selectedSlug}`)
+}
+}
+  
 
   return (
     <section className={style.category}>

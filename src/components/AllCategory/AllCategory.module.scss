@@ -1,2 +1,31 @@
 
 
+@use '../../helpers/variables' as *;
+
+.allCategory{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    //gap:0.5rem;
+    width: 78%;
+    margin: auto;
+ .productImg{
+    width: 208px;
+    height: 208px;
+    object-fit: cover;
+    margin: auto ;
+    margin-bottom: 1rem;
+ }
+ .productTitle{
+font-family: 'Roboto';
+font-weight: 500;
+font-size: 18px;
+margin: auto 30px;
+}
+.productDesc{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 14px; 
+    //margin-top: 5px; 
+    margin: 8px 30px ;
+}
+}

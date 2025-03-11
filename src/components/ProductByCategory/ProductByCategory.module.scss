@@ -1,0 +1,29 @@
+@use '../../helpers/variables' as *;
+
+.productByCategory{
+    display: flex;
+    gap:18px;
+    width: 78%;
+   margin: auto 30px;
+ .productImg{
+    width: 208px;
+    height: 208px;
+    object-fit: cover;
+    margin: auto 30px;
+    margin-bottom: 1.5rem;
+    
+ }
+ .productTitle{
+font-family: 'Roboto';
+font-weight: 500;
+font-size: 18px;
+margin: auto 30px;
+}
+.productDesc{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 14px; 
+    //margin-top: 5px; 
+    margin: 8px 30px ;
+}
+}
