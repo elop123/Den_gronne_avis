@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import style from './ProductById.module.scss'
 import { Comment } from '../Comment/Comment';
 
-export const ProductById = () => {
+export const ProductById = ({setComment}) => {
 const [productById, setProductById] = useState(null);
 const [loading, setLoading] = useState(true);
 const [error, setError] = useState(null);
@@ -29,12 +29,13 @@ useEffect(() => {
 
           } else {
             setProductById(data.data); 
+            setComment(data.data.comments || [])
             console.log(data.data)
           }
         })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
-  }, [slug]);
+  }, [slug, setComment]);
 
   if (loading) {
     return <p>Loading product by id...</p>;
@@ -56,9 +57,9 @@ useEffect(() => {
                      alt="product_img" />
                 <h3 className={style.productTitle}>{productById?.name}</h3>
                 <p className={style.productDescription}>{productById?.description}</p>
-                <p className={style.productPrice}>Pris: {productById?.price} Dkk</p>
+                <p className={style.productPrice}>Pris: {productById?.price} kr</p>
             </article> 
-            <Comment comments={productById?.comments} />
+            {/* <Comment comments={productById?.comments} /> */}
     </section>
   )
 }

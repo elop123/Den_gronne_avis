@@ -10,7 +10,7 @@ const[loading, setLoading] = useState(true);
 const[error, setError] = useState(null);
 
 const navigate = useNavigate();
-const { categorySlug } = useParams()
+const { slug } = useParams()
 
 const url=`http://localhost:4242/categories`;
 
@@ -50,7 +50,7 @@ useEffect(() => {
                  categoryMenu.map((item) => (
                 <ul key={item.id}>
                     <li  className={`${style.categoryList} 
-                    ${item.slug === categorySlug ? style.activeCategory : ''}`}
+                    ${item.slug === slug ? style.activeCategory : ''}`}
                     onClick={() => navigate(`/products/category/${item.slug}`)}>{item.name}</li>
                 </ul> 
             ))

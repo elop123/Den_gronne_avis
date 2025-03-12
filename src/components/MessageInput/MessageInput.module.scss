@@ -3,24 +3,27 @@
 .messageSection{
     width: 100%;
     max-width: 500px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
- 
+    margin: 0 auto;
+    //padding: 20px;
+    //text-align: center;
+    margin-bottom: 4rem;
 .messageTitle{
     text-align: center;
     font-family: $font-family;
     font-weight: 200;
     font-size: 28px;
     color: $logo_green;
+    padding: 1rem;
+    text-align: center;
 }
 .inputBox{
-width: 600px;
+width: 700px;
 height: 150px;
-border: 2px solid $light_green;
+border: 1.5px solid $logo_green ;
 padding: 10px;
 resize: none;
-
+margin: auto;
+//margin-left: -4rem;
 }
 .btnSend{
 width: 82px;
@@ -30,5 +33,6 @@ color: $white;
 border: none;
 justify-content: right;
 display: block;
+float: right;
 }
 }

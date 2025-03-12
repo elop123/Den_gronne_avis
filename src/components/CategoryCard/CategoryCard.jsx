@@ -47,7 +47,7 @@ useEffect(() => {
     <section className={style.categoryCard}>
         {category.length > 0 ? (
             category.slice(0,6).map((item) => (
-            <article key={item.id} className={style.card}>
+            <article key={item.id} className={style.card} onClick={() => navigate(`/products/category/${item.slug}`)}>
                 <p className={style.categoryTitle}>{item.name}</p>
                 <img src={item.category_image} 
                      className={style.category_img}

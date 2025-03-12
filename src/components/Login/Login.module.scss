@@ -16,7 +16,8 @@
     display: flex;
     border: 1.5px solid $light_green;
     padding: 10px;
-    background-color: white;
+    background-color: $lightGray;
+    margin-bottom: 1.5rem;
 }
 .label{
     text-align: left;
@@ -33,23 +34,27 @@
   font-size: 16px;
   padding-right: 10px;
   color: $logo_green 50%;
+  background-color: $lightGray;
 }
 .loginIcon{
 width: 20px;
 height: 20px;
 margin-left: 10px;
-color: lightgray 50%;
+filter: grayscale(100%) brightness(80%);
+opacity: 0.6;
 }
 .btnLogin{
     padding: 10px 24px;
     background-color: $logo_green;
-    color: white;
+    color: $white;
     border: none;
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
     float: right;
-   
+    &:hover{
+        background-color: $light_green;
+    }
 }
 .text{
     padding: 1rem 0px;

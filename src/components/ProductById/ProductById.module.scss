@@ -3,27 +3,28 @@
 .productStyle{
     margin: auto;
     padding: 1rem 2rem;
+    margin-top: 2rem;
     .productImg{
         width: 545px;
-        height:406px;
-       
-        }
-        .productTitle{
+        height:406px; 
+    }
+    .productTitle{
         font-family: 'Roboto';
         font-weight: 400;
         font-size: 36px;
-        padding: 0px 1rem;
-        }
-        .productDescription{
+        padding:10px 2px;
+    }
+    .productDescription{
         font-family: 'Roboto';
         font-weight: 300;
         font-size: 14px;
-        padding: 1rem;
+        padding: 1rem 2px;
         }
         .productPrice{
         font-family: 'Roboto';
         font-weight: 500;
         font-size: 20px;
-        padding: 1rem;
+        padding: 1rem 2px;
+        margin-bottom: 4.5rem;
         }
 }
