@@ -1,0 +1,55 @@
+@use "../../helpers/variables" as *;
+
+.signUpBox{
+  width: 100%;
+  max-width: 410px;
+  margin: auto;
+  font-family:'Roboto';
+  margin-bottom: 8rem;
+.title{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-family: 'Roboto';
+}
+.input{
+    width: 100%;
+    display: flex;
+    border: 1.5px solid $light_green;
+    padding: 10px;
+    background-color: $lightGray;
+    margin-bottom: 1rem;
+}
+.label{
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.btnOpen{
+    padding: 10px 24px;
+    background-color: $logo_green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    float: right;
+   
+}
+.text{
+    padding: 1rem 0px;
+}
+}
+
+
+
+
+
+
+
+
+

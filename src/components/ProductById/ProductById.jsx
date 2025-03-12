@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import style from './ProductById.module.scss'
+import { Comment } from '../Comment/Comment';
 
 export const ProductById = () => {
 const [productById, setProductById] = useState(null);
@@ -57,7 +58,7 @@ useEffect(() => {
                 <p className={style.productDescription}>{productById?.description}</p>
                 <p className={style.productPrice}>Pris: {productById?.price} Dkk</p>
             </article> 
-       
+            <Comment comments={productById?.comments} />
     </section>
   )
 }

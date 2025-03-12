@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useContext } from "react";
+import { UserContext } from "../../context/userContext";
+import { useNavigate } from "react-router-dom";
+import { FiLogOut } from "react-icons/fi";
 import style from "./MyProfile.module.scss"; 
 
 export const MyProfile = () => {
@@ -11,6 +15,8 @@ const [profile, setProfile] = useState({
     zipcode: "",
     city: " "
   });
+  const { userData, logout } = useContext(UserContext)
+  const navigate= useNavigate()
 
 const handleChange = (e) => {
     const { name, value, type } = e.target;
@@ -82,6 +88,7 @@ return (
           <div className={style.buttons}>
             <button className={style.deleteBtn} onClick={handleDelete}>slet profil</button>
             <button className={style.saveBtn} >gem ændringer</button>
+            <FiLogOut className={style.logoutBtn} onClick={() => { logout(); navigate("/"); }}/>
           </div>
         </div>
       </div>

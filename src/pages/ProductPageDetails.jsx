@@ -5,7 +5,10 @@ import { CategoryMenu } from '../components/CategoryMenu/CategoryMenu'
 import { Separator } from '../components/Separator/Separator'
 import { MessageInput } from '../components/MessageInput/MessageInput'
 
+
+
 export const ProductPageDetails = () => {
+
   return (
     <>
     <MainSeparator/>
@@ -13,6 +16,7 @@ export const ProductPageDetails = () => {
     <ProductById/>
     <Separator />
     <MessageInput/>
+
     </>
   )
 }

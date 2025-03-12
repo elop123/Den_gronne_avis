@@ -22,7 +22,7 @@ export const NavBar = () => {
       <div className={style.navIcons}>
        <img src={icon1} alt="mail_icon" />
        <img src={icon2} alt="info_icon" />
-       <img src={icon3} alt="account_icon" />
+       <NavLink to = "/login"><img src={icon3} alt="account_icon" /></NavLink>
       </div>
       </div>
     </nav>

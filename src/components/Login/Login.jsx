@@ -91,7 +91,7 @@ if (!email) {
         <img src={icon2} alt="icon_secure" className={style.loginIcon}/>
         </div>
     </div>
-    <p className={style.text}>Har du ikke allerede en konto? Klik  <a href="/signup">  her</a> 
+    <p className={style.text}>Har du ikke allerede en konto? Klik&nbsp;<a href="/signup">her</a>&nbsp;
     for at gå til sign up</p>
     <button type='submit'className={style.btnLogin}>Login</button>
     </form>

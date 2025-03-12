@@ -1,0 +1,23 @@
+@use "../helpers/variables" as *;
+
+body{
+    background-color:$lightGray ;
+    font-family:'Roboto';
+    
+    //width: 80%;
+    .donationCards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px; 
+        align-items: center;
+        width: 80%;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        gap: 20px; 
+        align-items: center;
+        justify-content: center; 
+        width: 80%;
+        margin: 2rem auto;
+    }
+    
+}
