@@ -3,6 +3,7 @@
 .profileContainer {
     padding: 20px;
     font-family:'Roboto';
+    margin-bottom: 5rem;
 .tabCard {
     display: flex;
     justify-content: space-between;
@@ -72,5 +73,8 @@ input[type="email"] {
 .logoutBtn{
     cursor: pointer;
     margin-left: 1rem;
+}
+.rightSection{
+    margin-top: 2rem;
 }
 }

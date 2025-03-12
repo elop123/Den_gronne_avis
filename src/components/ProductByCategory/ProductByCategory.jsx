@@ -52,11 +52,15 @@ useEffect(() => {
        
         {products.length > 0 ? (
             products.map((item) => (
-            <article key={item.id}  onClick={() => navigate(`/products/${item.slug}`)}>
+            <article key={item.id} className={style.articleStyle} onClick={() => navigate(`/products/${item.slug}`)}>
+                <div className={style.imageContainer}>
                 <img src={item.image} alt="product_img" className={style.productImg}/>
+                <div className={style.priceOverlay}>
+                <p className={style.price}>Pris: {item.price} kr</p>
+                </div>
+                </div>
                 <h3 className={style.productTitle}>{item.name}</h3>
                 <p className={style.productDesc}>{item.description}</p>
-                
             </article> 
             ))
         ) : (

@@ -11,7 +11,7 @@ export const Comment = ({ comment }) => {
     <section className={style.comment}>
       {comment.map((item, index) => (
         <div key={index} className={style.commentItem}>
-          <p className={style.commentUser}>{item.user.firstname} (sælger) d.{newDate(item.createdAt)}</p>
+          <p className={style.commentUser}>{item.user.firstname} d.{newDate(item.createdAt)}</p>
           <p className={style.commentText}>{item.comment}</p>
         </div>
       ))}

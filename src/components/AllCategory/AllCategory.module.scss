@@ -7,8 +7,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap:1.2rem;
     width: 78%;
-    margin: auto;
+    margin: auto 1rem;
     margin-top: 40px;
+    margin-bottom: 4rem;
 .all{
     position: relative;
     .productImg{
@@ -39,10 +40,10 @@
     margin: auto 30px;
     }
     .productDesc{
-        font-family: Roboto;
+        font-family: 'Roboto';
         font-weight: 200;
         font-size: 12px;  
-        margin: 8px 30px ;
+        margin: auto 30px ;
     }
     .priceOverlay {
         position: absolute;
@@ -59,5 +60,35 @@
         transition: opacity 0.3s ease;
     }
 }
-
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    m
+    li {
+    display: inline-block;
+    margin: 0 5px;  
+}
+a {
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+    color: #333;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+}
+.pagination .activePage a {
+    color: grey;
+}
+.pagination .pageBtn {
+    background-color: #ddd;
+    color: black;
+}
+.pagination .disabledPage {
+    opacity: 0.5;
+    pointer-events: none;
+}  
 }

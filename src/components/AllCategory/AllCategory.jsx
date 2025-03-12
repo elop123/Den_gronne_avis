@@ -2,12 +2,15 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import style from './AllCategory.module.scss'
 import { useNavigate } from 'react-router-dom'
+import ReactPaginate from 'react-paginate'
 
 
 export const AllCategory = () => {
 const[product, setProduct] = useState([])
 const[error, setError] = useState(null)
 const[loading, setLoading] = useState(true)
+const [currentPage, setCurrentPage] = useState(0)
+const productsPerPage = 9
 
 const navigate = useNavigate()
 
@@ -42,12 +45,23 @@ useEffect(() => {
     return <p className={style.error}>{error}</p>;
   }
     
+  const totalProducts = product.length;
+  const pageCount = Math.ceil(totalProducts / productsPerPage)
+
+  const currentItems = product.slice(
+    currentPage * productsPerPage,
+    (currentPage + 1) * productsPerPage
+  )
+  
+   const handlePageClick = ({ selected }) => {
+    setCurrentPage(selected);
+  }
+
   return (
     <section className={style.allCategory}>
-        
-        {product.length > 0 ? (
-                product.slice(0,9).map((item) => (
-              <article className={style.all} onClick={() => navigate(`/products/${item.slug}`)}>
+          {currentItems.length > 0 ? (
+        currentItems.map((item) => (
+              <article key={item.id} className={style.all} onClick={() => navigate(`/products/${item.slug}`)}>
                 <div className={style.imageContainer}>
                 <img key={item.id} 
                     className={style.productImg}
@@ -64,6 +78,23 @@ useEffect(() => {
         ) : (
           <p>No product available</p>
         )}
+           {totalProducts > productsPerPage && (
+        <ReactPaginate
+          previousLabel={"Forrige"}
+          nextLabel={"Næste"}
+          breakLabel={"..."}
+          pageCount={pageCount}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={3}
+          onPageChange={handlePageClick}
+          containerClassName={style.pagination}
+          activeClassName={style.activePage}
+          previousClassName={style.pageBtn}
+          nextClassName={style.pageBtn}
+          disabledClassName={style.disabledPage}
+          breakClassName={style.breakPage}
+        />
+      )}
     </section>
   )
 }

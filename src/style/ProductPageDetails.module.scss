@@ -1,0 +1,12 @@
+@use "../helpers/variables" as *;
+
+.message{
+    color: $logo_green;
+    text-align: center;
+    padding: 2rem;
+    cursor: pointer;
+    
+}
+a{
+    text-decoration: none;
+}

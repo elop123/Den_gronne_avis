@@ -9,8 +9,8 @@ export const MyProfile = () => {
 const [profile, setProfile] = useState({
     email: " ",
     password: " ",
-    firstName: "",
-    lastName: "",
+    firstname: "",
+    lastname: "",
     address: "",
     zipcode: "",
     city: " "
@@ -36,15 +36,15 @@ return (
         <div className={style.leftSection}>
           <label className="label">Fornavn</label>
           <input type="text" 
-                 name="firstName" 
-                 value={profile.firstName} 
+                 name="firstname" 
+                 value={profile.firstname} 
                  onChange={handleChange} 
                  placeholder="Dit navn..."
                  className="input" />
           <label>Efternavn</label>
           <input type="text" 
-                 name="lastName" 
-                 value={profile.lastName} 
+                 name="lastname" 
+                 value={profile.lastname} 
                  onChange={handleChange} 
                  placeholder="Dit efternavn..." />
           <label>Adresse</label>
@@ -56,7 +56,7 @@ return (
           <label>Postnummer</label>
           <input type="text" 
                  name="postalCode" 
-                 value={profile.postalCode} 
+                 value={profile.zipcode} 
                  onChange={handleChange} 
                  placeholder="Dit postnummer..." />
           <label>Telefon</label>
@@ -73,15 +73,16 @@ return (
                  placeholder="Din email adresse..." />
         </div>
         <div className={style.rightSection}>
-          <label>
+          <label className={style.checkbox}>
             <input type="checkbox" 
-                   name="receiveNews" 
-                   onChange={handleChange} />
+                   name="news" 
+                   onChange={handleChange}
+                   />
             Jeg ønsker at modtage nyheder om klima-indsatsen, gode tilbud, eksklusive deals og lignende promoverings-mails fra den grønne avis og samarbejdspartnere?
-          </label>
+          </label><br></br>
           <label>
             <input type="checkbox" 
-                   name="receiveNotifications" 
+                   name="notifications" 
                    onChange={handleChange} />
             Jeg ønsker at modtage notifikationer i form af emails når der sker en opdatering på en af mine annoncer eller jeg modtager en ny henvendelse?
           </label>

@@ -2,23 +2,20 @@ import React, { useState } from 'react'
 import ReactPaginate from 'react-paginate'
 import style from './Pagination.module.scss'
 
-export const Pagination = ({ totalPages, setCurrentPage }) => {
+export const Pagination = ({ currentPage, totalProducts, productsPerPage, onPageChange }) => {
 
+const totalPages = Math.ceil(totalProducts / productsPerPage);
+console.log(totalPages)
 
-  return (
-    <section>
-        <ReactPaginate
-        previousLabel={"Forrige side"} 
-        nextLabel={"Næste side"}        
-        breakLabel={"..."}
-        totalPages={totalPages}
-        marginPagesDisplayed={1}
-        pageRangeDisplayed={3}
-        onPageChange={(event) => onPageChange(event.selected + 1)}
-        containerClassName={style.pagination}
-        activeClassName={style.active}
-       
-    />
-    </section>
-  )
-}
+return (
+  <section className={style.pagination}>
+    {currentPage > 1 && (
+    <button onClick={() => onPageChange(currentPage - 1)}>Forrige side</button>
+  )}
+  <span>{currentPage}/{totalPages}</span>
+  {currentPage < totalPages && (
+    <button onClick={() => onPageChange(currentPage + 1)}>Næste side</button>
+  )}
+  </section>
+  );
+};
