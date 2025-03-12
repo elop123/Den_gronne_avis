@@ -11,8 +11,10 @@ export const ProductsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
-  const pageCount = Math.ceil(products.length / itemsPerPage);
-  const startIndex = currentPage * itemsPerPage;
+  const totalProducts = products.length;
+  const totalPages = Math.ceil(totalProducts / itemsPerPage);
+  
+  const startIndex = (currentPage-1) * itemsPerPage;
   const currentItems = products.slice(startIndex, startIndex + itemsPerPage);
 
   return (
@@ -24,7 +26,9 @@ export const ProductsPage = () => {
   </aside>
   <AllCategory products={currentItems} />
   </Grid>
-  <Pagination pageCount={pageCount} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+  {totalProducts > 0 && (
+  <Pagination totalPages={totalPages} currentPage={currentPage}  />
+)}
   </>
   )
 }

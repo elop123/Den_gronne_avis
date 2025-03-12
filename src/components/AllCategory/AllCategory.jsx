@@ -1,12 +1,15 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import style from './AllCategory.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 
 export const AllCategory = () => {
 const[product, setProduct] = useState([])
 const[error, setError] = useState(null)
 const[loading, setLoading] = useState(true)
+
+const navigate = useNavigate()
 
 const url = `http://localhost:4242/products`;
 
@@ -21,7 +24,7 @@ useEffect(() => {
       .then((data) => {
         console.log("Data:", data); 
 
-        if (!data || !Array.isArray(data.data) || data.data.length === 0) {
+        if (!data || !data.data|| data.data.length === 0) {
             setError("No product found");
           } else {
             setProduct(data.data); 
@@ -44,7 +47,7 @@ useEffect(() => {
         
         {product.length > 0 ? (
                 product.slice(0,9).map((item) => (
-              <article className={style.all}>
+              <article className={style.all} onClick={() => navigate(`/products/${item.slug}`)}>
                 <div className={style.imageContainer}>
                 <img key={item.id} 
                     className={style.productImg}

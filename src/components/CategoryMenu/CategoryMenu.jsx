@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import style from './CategoryMenu.module.scss'
 
 
@@ -10,6 +10,7 @@ const[loading, setLoading] = useState(true);
 const[error, setError] = useState(null);
 
 const navigate = useNavigate();
+const { categorySlug } = useParams()
 
 const url=`http://localhost:4242/categories`;
 
@@ -48,7 +49,9 @@ useEffect(() => {
                 {categoryMenu.length > 0 ? (
                  categoryMenu.map((item) => (
                 <ul key={item.id}>
-                    <li  className={style.categoryList}>{item.name}</li>
+                    <li  className={`${style.categoryList} 
+                    ${item.slug === categorySlug ? style.activeCategory : ''}`}
+                    onClick={() => navigate(`/products/category/${item.slug}`)}>{item.name}</li>
                 </ul> 
             ))
         ) : (

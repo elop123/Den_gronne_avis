@@ -2,11 +2,11 @@
 
 .loginBox{
   width: 100%;
-  max-width: 400px;
+  max-width: 410px;
   margin: auto;
   font-family:'Roboto';
  // text-align: center;
- //margin-bottom: 6rem;
+ margin-bottom: 8rem;
 .title{
     text-align: center;
     font-size: 24px;
@@ -48,6 +48,11 @@ color: lightgray 50%;
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
+    float: right;
+   
+}
+.text{
+    padding: 1rem 0px;
 }
 }
 

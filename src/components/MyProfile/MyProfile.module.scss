@@ -1,0 +1,77 @@
+@use '../../helpers/variables' as *;
+
+.profileContainer {
+    padding: 20px;
+    font-family:'Roboto';
+.tabCard {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e7d32;
+    padding: 10px;
+} 
+.greenTab {
+    background-color: #1e7d32;
+    color: white;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    border: none;
+}
+.whiteTab {
+    background-color: white;
+    color: #1e7d32;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #1e7d32;
+}
+.profileForm {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+  .leftSection {
+    width: 50%;
+}
+.rightSection {
+    width: 45%;
+}
+.label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+} 
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #1e7d32;
+}
+// .input{
+//     width: 100%;
+//     border: none;
+//     outline: none;
+//     font-size: 16px;
+//     padding-right: 10px;
+//     color: $logo_green 50%;
+// }
+.buttons {
+    margin-top: 20px;
+}
+.deleteBtn {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.saveBtn {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+}

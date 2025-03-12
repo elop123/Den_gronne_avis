@@ -7,11 +7,14 @@ import './App.css'
 import { ProductPageDetails } from "./pages/ProductPageDetails"
 import { LoginPage } from "./pages/LoginPage"
 import { AnnouncePage } from "./pages/AnnouncePage"
+import { MyAccountPage } from "./pages/MyAccountPage"
+import { UserContextProvider } from "./context/userContext"
 
 
 function App() {
  
   return (
+    <UserContextProvider>
     <Router>
     <Routes>
     <Route path="/" element={<MainLayout />}>
@@ -21,11 +24,13 @@ function App() {
     <Route path="products/category/:slug" element={<CategoryPage />} />
     <Route path="/login" element={<LoginPage />} />
     <Route path="/announce" element={<AnnouncePage />} />
+    <Route path="/myaccount" element={<MyAccountPage />} />
 
     
     </Route>
     </Routes>
   </Router>
+  </UserContextProvider>
   )
 }
 
