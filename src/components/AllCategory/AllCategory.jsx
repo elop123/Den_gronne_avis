@@ -68,11 +68,11 @@ useEffect(() => {
                     src={item.image} 
                     alt='product_img'></img> 
                   <div className={style.priceOverlay}>
-                  <p>Pris: {item.price} kr</p>
+                  <p className={style.price}>Pris: {item.price} kr</p>
                   </div>
                 </div>
-                <h3>{item.name}</h3>
-                <p>{item.description}</p>
+                <h3 className={style.productTitle}>{item.name}</h3>
+                <p className={style.productDesc}>{item.description}</p>
               </article>
             ))
         ) : (

@@ -5,13 +5,17 @@
 .allCategory{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap:1.2rem;
+    gap:1rem;
     width: 78%;
     margin: auto 1rem;
     margin-top: 40px;
     margin-bottom: 4rem;
+    flex-wrap: wrap;
 .all{
     position: relative;
+    &:hover .priceOverlay {
+        opacity: 1; 
+    }
     .productImg{
         display: block;
         width: 208px;
@@ -23,27 +27,28 @@
         &:hover {
             border: 4px solid rgba(0, 166, 120); 
         }
+        
      }
      .imageContainer {
         position: relative;
         display: inline-block;
-        width: 100%;
+        //width: 100%;
         &:hover .priceOverlay {
-        opacity: 1; 
-        //border: 2px solid rgba(0, 166, 120, 0.7);
+            opacity: 1; 
         }
     }
      .productTitle{
     font-family: 'Roboto';
-    font-weight: 300;
-    font-size: 16px;
-    margin: auto 30px;
+    font-weight: 400;
+    font-size: 18px;
+    margin: auto ;
     }
     .productDesc{
         font-family: 'Roboto';
         font-weight: 200;
-        font-size: 12px;  
-        margin: auto 30px ;
+        font-size: 16px;  
+        margin: auto  ;
+        margin-bottom: 1rem;
     }
     .priceOverlay {
         position: absolute;
@@ -58,6 +63,11 @@
         font-weight: bold;
         opacity: 0; 
         transition: opacity 0.3s ease;
+        z-index: 10;
+        .price{
+            margin: auto ;
+            
+        }
     }
 }
 .pagination {
@@ -91,4 +101,15 @@ a {
     opacity: 0.5;
     pointer-events: none;
 }  
+}
+@media(max-width:600px){
+    .allCategory{
+        display: block;
+    }
+}
+@media(max-width:768px){
+    .allCategory{
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
 }

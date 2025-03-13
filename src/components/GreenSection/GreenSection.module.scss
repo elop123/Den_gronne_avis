@@ -39,3 +39,52 @@
     margin: auto;
     line-height: 24px;
 }}
+@media screen and (max-width: 1024px) {
+    .greenSection {
+        width: 90%;
+        min-height: 200px;
+
+        .title {
+            font-size: 32px;
+            padding: 2rem;
+        }
+
+        .text {
+            width: 60%;
+            padding: 2px 2rem;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .greenSection {
+        width: 80%;
+        min-height: 180px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        .title {
+            font-size: 28px;
+            padding: 1.5rem;
+        }
+        .text {
+            width: 70%;
+            padding: 2px 1.5rem;
+            line-height: 22px;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .greenSection {
+        width: 80%;
+        min-height: 160px;
+        padding: 1rem;
+        .title {
+            font-size: 24px;
+            padding: 1rem;
+        }
+        .text {
+            width: 80%;
+            padding: 2px 1rem;
+            font-size: 14px;
+        }
+    }
+}

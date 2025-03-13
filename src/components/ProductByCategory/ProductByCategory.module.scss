@@ -10,6 +10,7 @@
    .articleStyle{
     position: relative;
     cursor: pointer;
+    flex-wrap: wrap;
 .imageContainer {
     position: relative;
     display: inline-block;
@@ -33,18 +34,17 @@
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
-    margin: auto 30px;
+    margin: auto;
 }
 .productDesc{
     font-family: 'Roboto';
     font-weight: 300;
     font-size: 14px; 
     margin-top: 5px; 
-    margin: auto 30px ;
+    margin: auto ;
 }
 
  .priceOverlay {
-    
      position: absolute;
      bottom: 0;
      left: 0;
@@ -63,4 +63,32 @@
     }
  }
 }
+}
+@media(max-width:600px){
+    .productByCategory{
+        display: block;
+        gap: 1rem;
+        .articleStyle{
+            margin-bottom: 2rem;
+            margin-top: 3rem;
+          .productTitle, .productDesc{
+            margin: auto;
+          }    
+        }
+       
+    }
+}
+@media(max-width:768px){
+    .productByCategory{
+        display: block;
+        gap: 1rem;
+        .articleStyle{
+            margin-bottom: 2rem;
+            margin-top: 3rem;
+          .productTitle, .productDesc{
+            margin: auto;
+          }    
+        }
+       
+    }
 }

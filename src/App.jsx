@@ -10,6 +10,7 @@ import { AnnouncePage } from "./pages/AnnouncePage"
 import { MyAccountPage } from "./pages/MyAccountPage"
 import { UserContextProvider } from "./context/userContext"
 import { SignUpPage } from "./pages/SignUpPage"
+import { MyAnnouncePage } from "./pages/MyAnnouncePage"
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <Route path="/announce" element={<AnnouncePage />} />
     <Route path="/myaccount" element={<MyAccountPage />} />
     <Route path="/signup" element={<SignUpPage />} />
+    <Route path="/myannounce" element={<MyAnnouncePage />} />
     </Route>
     </Routes>
   </Router>

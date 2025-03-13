@@ -2,12 +2,13 @@
 
 .categoryCard{
    display: flex;
-   gap:18px;
+   gap:15px;
    width: 78%;
    margin: auto;
    margin-bottom: 2rem;
    cursor: pointer;
-   //flex-wrap: wrap;
+   flex-wrap: wrap;
+   justify-content: center;
 .card{
    position: relative;
    &:hover{

@@ -16,11 +16,33 @@
     padding: 4px;
     margin-left: 70px;
     list-style-type: none;
-    cursor: pointer;
-   
+    cursor: pointer;  
 }
 .activeCategory {
     font-weight: 700; 
-    
-  
+}
+@media (max-width: 1024px) {
+    .categoryTitle {
+        font-size: 18px; 
+        margin-left: 30px;
+        text-align: left; 
+    }
+    .categoryList {
+        font-size: 13px; 
+        margin-left: 30px;
+        text-align: left;
+    }
+}
+@media (max-width: 768px) {
+    .categoryTitle {
+        font-size: 16px; 
+        margin-left: 10px;
+        text-align: left;
+    }
+    .categoryList {
+        font-size: 12px; 
+        margin-left: 10px; 
+        text-align: left;
+        padding: 2px; 
+    }
 }

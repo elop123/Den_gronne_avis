@@ -7,11 +7,8 @@
     grid-template-columns: repeat(3,1fr);
     padding: 3rem 6rem;
     gap: 2rem;
-    @media(max-width:768px){
-        display: grid;
-        grid-template-columns: 1fr ;
-    }
    
+    
 .footerTitle{
     color: $white;
     font-size: 20px;
@@ -38,15 +35,12 @@
         }
         .btnSignUp{
             background-color: $logo_green;
-            padding: 10px;
+            padding: 8px;
             border: none;
             margin-top: 10px;
             color: $white;
         }
     }
-   
-   
-   
 }
 .contactSection{
     margin-left: 4rem;
@@ -66,7 +60,71 @@
         font-size: 12px;
     }
 }
-
-    
-
 }
+@media(max-width: 1024px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 2rem 4rem;
+        gap: 1.5rem;
+    }
+    .contactSection {
+        margin-left: 2rem;
+    }
+    .inputSection{
+        width: 50%;
+        .newsInput {
+            width: 50%;
+            //margin-bottom: 10px;
+        }
+    }
+    
+}
+@media (max-width: 768px) {
+    .footer {
+        grid-template-columns: 1fr; 
+        padding: 2rem;
+        text-align: center;
+    }
+   
+    .newsSection .inputSection {
+        flex-direction: column;
+        align-items: center;
+        .footerTitle{
+            margin: auto;
+        }
+        .newsInput {
+            width: 40%;
+            //margin-bottom: 10px;
+        }
+        .btnSignUp {
+            width: 30%;
+            padding: 8px;
+        }
+    }
+    
+}
+
+// @media (max-width: 600px) {
+//     .footer {
+//         grid-template-columns: 1fr; 
+//         text-align: center;
+//         justify-content: center;
+//     }
+//     .newsSection .inputSection {
+//         flex-direction: column;
+//         align-items: center;
+//         text-align: center;
+//         justify-content: center;
+//         .newsInput {
+//             width: 40%;
+//         }
+//         .btnSignUp {
+//             width: 30%;
+//         }
+//     }
+//     .contactSection {
+//         text-align: center;
+//         margin-left: 0;
+//     }
+// }
+

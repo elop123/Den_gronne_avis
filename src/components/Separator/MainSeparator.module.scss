@@ -8,4 +8,26 @@ left: 153px;
 background-color: $logo_green;
 margin: auto;
 margin-top: 104px;
+
+}
+@media (max-width: 600px) {
+    .separator {
+        width: 80%;
+        height: 2px;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 980px) {
+    .separator {
+        width: 80%;
+        height: 2px;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 900px) {
+    .separator {
+        width: 80%;
+        height: 2px;
+        margin-top: 10px;
+    }
 }

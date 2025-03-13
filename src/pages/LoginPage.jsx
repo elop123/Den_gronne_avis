@@ -5,11 +5,13 @@ import {DonationCard} from '../components/DonationCard/DonationCard'
 import style from '../style/LoginPage.module.scss'
 import img1 from '../assets/images/banner_image2.jpg'
 import img2 from '../assets/images/banner_image3.jpg'
+import {MainSeparator} from '../components/Separator/MainSeparator'
 
 
 export const LoginPage = () => {
   return (
     <>
+    <MainSeparator />
     <Login />
     <Separator />
     <div className={style.donationCards}>

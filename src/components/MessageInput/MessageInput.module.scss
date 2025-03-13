@@ -21,6 +21,7 @@ border: 1.5px solid $logo_green ;
 padding: 10px;
 resize: none;
 margin: 0 auto;
+flex-wrap: wrap;
 }
 .btnSend{
 width: 82px;
@@ -33,3 +34,45 @@ margin-right: 2.1rem;
 margin-top: 1rem;
 }
 }
+@media(max-width:600px){
+    .messageSection {
+        max-width: 70%;
+        margin-bottom: 4rem;
+        margin:auto ;
+        .inputBox{
+            margin-left: 2rem;
+        }
+        .btnSend{
+            margin-right: 3rem;
+        }
+    }}
+
+@media (max-width: 768px) {
+    .messageSection {
+        max-width: 70%;
+        margin-bottom: 4rem;
+        margin: auto;
+        .inputBox{
+            width: 90%;
+            margin: auto;
+        }
+        .btnSend{
+            margin-right: 2.6rem;
+        }
+       
+    }}
+
+@media(max-width:900px){
+    .messageSection {
+        max-width: 85%;
+        margin-bottom: 4rem;
+        margin: auto;
+        align-items: center;
+        .inputBox{
+            width: 90%;
+            margin: auto;
+        }
+        .btnSend{
+            margin-right: 2.6rem;
+        }
+    }} 

@@ -3,7 +3,10 @@
 .profileContainer {
     padding: 20px;
     font-family:'Roboto';
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+    width: 80%;
+    margin: auto;
 .tabCard {
     display: flex;
     justify-content: space-between;
@@ -77,4 +80,13 @@ input[type="email"] {
 .rightSection{
     margin-top: 2rem;
 }
+}
+@media(max-width:600px){
+    .saveBtn{
+     margin-top: 1rem;
+     display: block;
+    }
+    .logoutBtn{
+        margin-top: 1rem;
+    }
 }

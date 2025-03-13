@@ -76,7 +76,7 @@ return (
    <section className={style.announceBox}>
     <h2 className={style.title}>Opret ny announce</h2>
     <h3 className={style.subtitle}>Her kan du oprette en ny announce.</h3>
-    <h3>Du har mulighed for at slette dine annoncer igen under “min konto” siden</h3>
+    <h3 className={style.subtitle}>Du har mulighed for at slette dine annoncer igen under “min konto” siden</h3>
     {error && <p className={style.error}>{error}</p>}
     {message && <p className={style.success}>{message}</p>}
 
@@ -105,7 +105,7 @@ return (
                   value={description} 
                   placeholder='Skriv en announce tekst her der beskriver produktet...'
                   onChange={(e)=>setDescription(e.target.value)}
-                  className={style.input}>
+                  className={style.input} style={{resize:'none'}}>
         </textarea>
     </div>
     <div className={style.announce}>

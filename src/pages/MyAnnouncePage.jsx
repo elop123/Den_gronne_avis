@@ -1,12 +1,12 @@
 import React from 'react'
-import { MyProfile } from '../components/MyProfile/MyProfile'
 import { MainSeparator } from '../components/Separator/MainSeparator'
+import { MyAnnounce } from '../components/MyAnnounce/MyAnnounce'
 
-export const MyAccountPage = () => {
+export const MyAnnouncePage = () => {
   return (
     <>
     <MainSeparator/>
-    <MyProfile/>
+    <MyAnnounce/>
     </>
   )
 }
