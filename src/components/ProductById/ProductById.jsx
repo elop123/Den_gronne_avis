@@ -52,7 +52,7 @@ useEffect(() => {
     <section className={style.productById}>
        
             <article key={productById.id} className={style.productStyle} >
-                <img src={productById?.image} 
+                <img src={productById?.image || 'default-image.jpg'} 
                      className={style.productImg}
                      alt="product_img" />
                 <h3 className={style.productTitle}>{productById?.name}</h3>

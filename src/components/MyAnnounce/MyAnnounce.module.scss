@@ -1,0 +1,52 @@
+@use '../../helpers/variables' as *;
+
+.announceContainer {
+    padding: 20px;
+    font-family:'Roboto';
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+    width: 80%;
+    margin: auto;
+.tabCard {
+    display: flex;
+    justify-content: space-between;
+    background-color:$logo_green;
+    //padding: 10px;
+} 
+.greenTab {
+    background-color: $logo_green;
+    color: white;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    border: none;
+}
+.whiteTab {
+    background-color: white;
+    color: $logo_green;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid $logo_green;
+}
+.announceForm {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+ 
+.logoutBtn{
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+}
+@media(max-width:600px){
+    .saveBtn{
+     margin-top: 1rem;
+     display: block;
+    }
+    .logoutBtn{
+        margin-top: 1rem;
+    }
+}

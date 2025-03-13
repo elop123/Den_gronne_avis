@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useContext } from "react";
 import { UserContext } from "../../context/userContext";
-import { useNavigate } from "react-router-dom";
 import { FiLogOut } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 import style from "./MyProfile.module.scss"; 
 
 export const MyProfile = () => {
@@ -18,6 +18,7 @@ const [profile, setProfile] = useState({
   const { userData, logout } = useContext(UserContext)
   const navigate= useNavigate()
 
+
 const handleChange = (e) => {
     const { name, value, type } = e.target;
     setProfile() }
@@ -29,8 +30,8 @@ const handleDelete = ()=>{
 return (
     <section className={style.profileContainer}>
       <div className={style.tabCard}>
-        <button className={style.greenTab}>Min Profil</button>
-        <button className={style.whiteTab}>Mine Annoncer</button>
+        <button className={style.greenTab} >Min Profil</button>
+        <button className={style.whiteTab} onClick={()=>{navigate('/myannounce')}}>Mine Annoncer</button>
       </div>
       <div className={style.profileForm}>
         <div className={style.leftSection}>
