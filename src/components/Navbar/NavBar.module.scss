@@ -57,4 +57,59 @@
     }
 }
 
+@media (max-width: 1024px) { 
+    flex-direction: column;
+    height: auto;
+    padding: 12px 24px;
+    text-align: center;
+    .logo {
+        justify-content: center;
+        font-size: 24px;
+        padding: 8px;
+    }
+    .category {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        padding: 1rem;
+    .button {
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+        }
+    }
 }
+@media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+    
+    .logo {
+        font-size: 20px;
+        padding: 5px;
+    }
+    .category {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    .button {
+        width: 100%;
+        max-width: 140px;
+        height: 38px;
+        font-size: 13px;
+    }
+    .navIcons {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        font-size: 14px;
+       
+    }
+    }
+}
+}
+

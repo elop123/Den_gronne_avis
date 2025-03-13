@@ -6,6 +6,16 @@
   margin: auto;
   font-family:'Roboto';
   margin-bottom: 8rem;
+  .error{
+    color: red;
+    padding: 1rem 0;
+}
+.success{
+    color: green;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+}
 .title{
     text-align: center;
     font-size: 24px;
@@ -38,11 +48,14 @@
     font-size: 16px;
     margin-top: 10px;
     float: right;
-   
+    &:hover{
+        background-color: $light_green;
+    }
 }
 .text{
     padding: 1rem 0px;
 }
+
 }
 
 

@@ -7,6 +7,7 @@
    margin: auto;
    margin-bottom: 2rem;
    cursor: pointer;
+   //flex-wrap: wrap;
 .card{
    position: relative;
    &:hover{
@@ -31,5 +32,9 @@
       cursor: pointer;
    }
 }   
-
+@media(max-width:768px){
+   .categoryCard{
+      flex-wrap: wrap;
+   }
+}
 }
