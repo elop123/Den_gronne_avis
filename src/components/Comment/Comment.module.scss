@@ -5,15 +5,18 @@
     gap: 10px;
     width: 78%;
     align-items: flex-end;
-    text-align: left;
+    //text-align: left;
 .commentItem  {
     display: flex;
     flex-direction: column;
     width: 300px;
+    align-items: flex-end;
+    .commentUser{
+        color: Gray;
+       margin-right: 2.2rem;
+    }
 }
-.commentUser{
-    color: Gray;
-}
+
 .commentText{
     background: #ffffff;
     border: 2px solid $light_green;
@@ -28,4 +31,21 @@
     text-align: left;
     
 }
+}
+
+@media(max-width:600px){
+    .comment{
+        width: 91%;
+    }   
+}
+@media(max-width:700px){
+    .comment{
+        width: 89%;
+    }
+}
+@media(max-width:1100px){
+    .comment{
+        width: 92%;
+    }
+
 }

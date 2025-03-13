@@ -12,8 +12,10 @@
     justify-content: space-between;
     background-color:$logo_green;
     //padding: 10px;
+    margin-bottom: 8rem;
 } 
 .greenTab {
+    cursor: pointer;
     background-color: $logo_green;
     color: white;
     width: 50%;
@@ -22,6 +24,7 @@
     border: none;
 }
 .whiteTab {
+    cursor: pointer;
     background-color: white;
     color: $logo_green;
     width: 50%;

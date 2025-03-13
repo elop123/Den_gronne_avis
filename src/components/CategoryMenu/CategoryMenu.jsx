@@ -45,7 +45,7 @@ useEffect(() => {
 
   return (
     <section className={style.categoryMenu}>
-            <h2 className={style.categoryTitle}><strong>Alle kategorier</strong></h2>
+            <h2 className={style.categoryTitle} onClick={()=>navigate("/products")}><strong>Alle kategorier</strong></h2>
                 {categoryMenu.length > 0 ? (
                  categoryMenu.map((item) => (
                 <ul key={item.id}>

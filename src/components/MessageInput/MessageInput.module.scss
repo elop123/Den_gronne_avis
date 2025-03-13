@@ -24,6 +24,7 @@ margin: 0 auto;
 flex-wrap: wrap;
 }
 .btnSend{
+cursor: pointer;
 width: 82px;
 height: 28px;
 background-color: $logo_green;
@@ -32,6 +33,9 @@ border: none;
 float: right;
 margin-right: 2.1rem;
 margin-top: 1rem;
+&:hover{
+    background-color: $light_green;
+}
 }
 }
 @media(max-width:600px){

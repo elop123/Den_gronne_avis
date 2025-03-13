@@ -1,5 +1,6 @@
 .productList {
     text-align: center;
+    min-height: 100vh;
   }
   .products {
     display: grid;
@@ -21,11 +22,14 @@
     justify-content: center;
     list-style: none;
     padding: 10px;
+    position: sticky;
+    
   }
   .pagination li {
     margin: 5px;
     padding: 8px 12px;
     cursor: pointer;
+    
   }
   
   
