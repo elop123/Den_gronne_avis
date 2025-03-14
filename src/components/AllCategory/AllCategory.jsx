@@ -25,12 +25,14 @@ useEffect(() => {
         return res.json();
       })
       .then((data) => {
-        console.log("Data:", data); 
+       // console.log("Data:", data); 
 
-        if (!data || !data.data|| data.data.length === 0) {
-            setError("No product found");
+        if (!data || !data.data||!Array.isArray(data.data)|| data.data.length === 0) {
+            setError("Ingen produkter fundet");
+            setProduct([]);
           } else {
             setProduct(data.data); 
+            setError(null);
           }
         })
       .catch((err) => setError(err.message))
@@ -38,11 +40,14 @@ useEffect(() => {
   }, []);
 
   if (loading) {
-    return <p>Loading products...</p>;
+    return <p>Indlæser produkter...</p>;
   }
 
   if (error) {
     return <p className={style.error}>{error}</p>;
+  }
+  if (product.length === 0) {
+    return <p className={style.noProducts}>Ingen produkter </p>;
   }
     
   const totalProducts = product.length;
@@ -76,7 +81,7 @@ useEffect(() => {
               </article>
             ))
         ) : (
-          <p>No product available</p>
+          <p>Ingen produkter</p>
         )}
            {totalProducts > productsPerPage && (
         <ReactPaginate

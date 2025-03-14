@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState, useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../../context/userContext'
 
 import style from './SignUp.module.scss'
@@ -62,7 +61,7 @@ export const SignUp = () => {
         const response = await fetch("http://localhost:4242/users", options);
         const data = await response.json();
 
-        console.log("Server Response:", data);
+        //console.log("Server Response:", data);
 
         if (response.ok) {
             setMessage("Du er tilmeld! ");
@@ -76,7 +75,7 @@ export const SignUp = () => {
             setCity("");
             setZipcode("");
             setIsChecked(false); 
-            console.log(" Signup successful:", data);
+            //console.log(" Signup successful:", data);
         } else {
             setError(data.message || "Noget gik galt. Prøv igen.");
         }
@@ -84,10 +83,6 @@ export const SignUp = () => {
         setError("Der opstod en fejl. Prøv igen senere.");
     }
 };
-
-// const handleCancel = () => {
-//   setIsSignUp(false); 
-// }
 
 
   return (

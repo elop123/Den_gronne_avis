@@ -1,7 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './Footer.module.scss'
 
 export const Footer = () => {
+const [email, setEmail] = useState("")
+const [error, setError] = useState("")
+const [success, setSuccess] = useState("")
+
+const validateEmail = (email) => {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return emailPattern.test(email)
+}
+
+const handleSubmit = () => {
+  setError('');
+  setSuccess('');
+  if (!email) {
+  setError('Email må ikke være tom.')
+  return
+  }
+  if (!validateEmail(email)) {
+    setError('Indtast en gyldig emailadresse.');
+    return;
+  }
+  setSuccess('Du er nu tilmeldt nyhedsbrevet!');
+  setEmail('')
+
+  setTimeout(() => {
+    setSuccess('');
+  }, 3000);
+};
+
   return (
     <footer className={style.footer}>
       <section className={style.newsSection}>
@@ -9,9 +37,15 @@ export const Footer = () => {
         <p className={style.footerText}>Vil du være med på den grønne front? Tilmeld dig vores nyhedsbrev og få 
           de seneste klima opdateringer direkte i din indbakke</p>
         <div className={style.inputSection}>
-        <input type="email" className={style.newsInput}/>
-        <button className={style.btnSignUp}>Tilmeld</button>
+        <input type="email" 
+               className={style.newsInput}
+               value={email}
+               onChange={(e) => setEmail(e.target.value)}/>
+        <button className={style.btnSignUp}onClick={handleSubmit}>Tilmeld</button>
+        
         </div>
+        {error && <p className={style.error}>{error}</p>}
+        {success && <p className={style.success}>{success}</p>}
       </section>
       <section className={style.contactSection}>
         <h2 className={style.footerTitle}>Kontakt</h2>

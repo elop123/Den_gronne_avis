@@ -17,15 +17,15 @@ useEffect(() => {
     fetch(url)
       .then((res) => {
         if (!res.ok) {
-          throw new Error("Failed to fetch categories");
+          throw new Error("Kunne ikke hente kategorier");
         }
         return res.json();
       })
       .then((data) => {
-        console.log("Data:", data); 
+        //console.log("Data:", data); 
 
         if (!data || !data.data) {
-            setError("No categories found");
+            setError("Ingen kategorier fundet");
             setCategory([]);
           } else {
             setCategory(data.data); 
@@ -53,7 +53,6 @@ if (selectedSlug === "all") {
 }
 }
   
-
   return (
     <section className={style.category}>
             <select className={style.dropdown} onChange={handleCategory}>

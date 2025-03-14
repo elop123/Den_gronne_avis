@@ -1,5 +1,4 @@
 
-
 @use '../../helpers/variables' as *;
 
 .allCategory{
@@ -32,9 +31,6 @@
      .imageContainer {
         position: relative;
         display: inline-block;
-        //width: 100%;
-      
-       
     }
      .productTitle{
     font-family: 'Roboto';
@@ -69,7 +65,6 @@
         }
     }
 }
-
 .pagination {
     display: flex;
     justify-content: center;

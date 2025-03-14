@@ -1,20 +1,35 @@
 import React from 'react'
-import { useState, useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState,useEffect, useContext } from 'react'
 import { UserContext } from '../../context/userContext'
 import style from './Announce.module.scss'
 
 export const Announce = () => {
-    const [title, setTitle] = useState("")
-    const [category, setCategory] = useState("")
-    const [description, setDescription] = useState("")
-    const [url, setUrl] = useState("")
-    const [price, setPrice] = useState("")
-    const [error, setError] = useState('')
-    const [isWriting, setIsWriting] = useState(true)
-    const [message, setMessage] = useState('')
+const [title, setTitle] = useState("")
+const [category, setCategory] = useState("")
+const [description, setDescription] = useState("")
+const [url, setUrl] = useState("")
+const [price, setPrice] = useState("")
+const [error, setError] = useState('')
+const [isWriting, setIsWriting] = useState(true)
+const [message, setMessage] = useState('')
+const [categories, setCategories] = useState([])
   
- const { userData, setUserData } = useContext(UserContext);
+const { userData, setUserData } = useContext(UserContext);
+
+// Fetch categories from API
+useEffect(() => {
+    fetch("http://localhost:4242/categories")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.data) {
+        setCategories(data.data);
+        } else {
+        setCategories([]);
+        }
+    })
+      .catch(() => setError("Kunne ikke hente kategorier."));
+}, [])
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -49,7 +64,7 @@ export const Announce = () => {
         const response = await fetch("http://localhost:4242/products", options);
         const data = await response.json();
 
-        console.log("Server Response:", data);
+       // console.log("Server Response:", data);
 
         if (response.ok) {
             setMessage("Din announce er offentliggjort! ");
@@ -60,7 +75,7 @@ export const Announce = () => {
             setCategory("");
             setDescription("");
             setPrice("");
-            console.log(" Announce is published:", data);
+            //console.log(" Announce is published:", data);
         } else {
             setError(data.message || "Noget gik galt. Prøv igen.");
         }
@@ -92,12 +107,19 @@ return (
     </div>
 
     <div className={style.announce}>
-        <label className={style.label}>Kategori</label>
-        <input type="text"
-               placeholder='Hvilken kategori tilhører dit produkt...'
-               value={category}
-               onChange={(e)=>setCategory(e.target.value)}
-            className={style.input} />
+    <label className={style.label}>Kategori</label>
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            className={style.input}
+          >
+            <option value="">Vælg en kategori</option>
+            {categories.map((cat) => (
+              <option key={cat.id} value={cat.id}>
+                {cat.name}
+              </option>
+            ))}
+          </select>
     </div>
     <div className={style.announce}>
         <label className={style.label}>Announce text</label>
@@ -113,7 +135,7 @@ return (
         <input type="text"
                id="url"
                placeholder='Har du et billede som ligger på nettet kan du indsætte un URL her...'
-               value={url}
+               value={url }
                onChange={(e)=>setUrl(e.target.value)}
             className={style.input} />
     </div>

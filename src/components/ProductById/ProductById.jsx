@@ -17,7 +17,7 @@ useEffect(() => {
     
       .then((res) => {
         if (!res.ok) {
-          throw new Error("Failed to fetch product by id");
+          throw new Error("Kunne ikke hente produkter efter id");
         }
         return res.json();
       })
@@ -25,7 +25,7 @@ useEffect(() => {
         console.log("Data:", data); 
 
         if (!data || !data.data ){
-            setError("No product found");
+            setError("Ingen produkt fundet");
 
           } else {
             setProductById(data.data); 
@@ -46,7 +46,7 @@ useEffect(() => {
   }
 
   if (!productById) {
-    return <p>No product details available</p>;
+    return <p>Ingen produk fundet</p>;
 }
   return (
     <section className={style.productById}>

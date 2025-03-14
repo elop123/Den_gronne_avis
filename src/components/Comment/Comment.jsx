@@ -5,8 +5,6 @@ import {newDate} from '../../helpers/newDate.js'
 export const Comment = ({comment}) => { 
 
 
- 
-
   return (
     <section className={style.comment}>
       {comment.map((item, index) => (

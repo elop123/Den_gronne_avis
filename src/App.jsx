@@ -11,6 +11,7 @@ import { MyAccountPage } from "./pages/MyAccountPage"
 import { UserContextProvider } from "./context/userContext"
 import { SignUpPage } from "./pages/SignUpPage"
 import { MyAnnouncePage } from "./pages/MyAnnouncePage"
+import { NotFoundPage } from "./pages/NotFoundPage"
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
     <Route path="/myaccount" element={<MyAccountPage />} />
     <Route path="/signup" element={<SignUpPage />} />
     <Route path="/myannounce" element={<MyAnnouncePage />} />
+    <Route path={"/*"} element={<NotFoundPage />} />
     </Route>
     </Routes>
   </Router>

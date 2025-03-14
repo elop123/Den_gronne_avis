@@ -18,21 +18,21 @@ useEffect(() => {
     fetch(url)
     
       .then((res) => {
-        console.log("Response:", res.status);
+        //console.log("Response:", res.status);
         if (!res.ok) {
-          throw new Error("Failed to fetch product by category");
+          throw new Error("Kunne ikke hente produkter efter kategori");
         }
         return res.json();
       })
       .then((data) => {
-        console.log("Data:", data); 
+        //console.log("Data:", data); 
 
         if (!data ||!Array.isArray(data.data) || data.data.length === 0){
-            setError("No product found");
+            setError("ingen produkt fundet");
             setProducts([])
           } else {
             setProducts(data.data); 
-            console.log(data.data)
+            //console.log(data.data)
           }
         })
       .catch((err) => setError(err.message))
@@ -64,7 +64,7 @@ useEffect(() => {
             </article> 
             ))
         ) : (
-          <article>No products available</article>
+          <article>Ingen produkt fundet</article>
         )}
     </section>
   )

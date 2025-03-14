@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import style from './MessageInput.module.scss'
 
 
-export const MessageInput = () => {
+export const MessageInput = ({setComment}) => {
 const[message, setMessage] = useState("")
 
 const handleMessage = () => {

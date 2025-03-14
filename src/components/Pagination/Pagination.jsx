@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import ReactPaginate from 'react-paginate'
+import React from 'react'
+
 import style from './Pagination.module.scss'
 
 export const Pagination = ({ currentPage, totalProducts, productsPerPage, onPageChange }) => {

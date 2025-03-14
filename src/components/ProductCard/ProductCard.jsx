@@ -16,15 +16,15 @@ useEffect(() => {
     fetch(url)
       .then((res) => {
         if (!res.ok) {
-          throw new Error("Failed to fetch products");
+          throw new Error("Kunne ikke hente produkter");
         }
         return res.json();
       })
       .then((data) => {
-        console.log("Data:", data); 
+        //console.log("Data:", data); 
 
         if (!data ) {
-            setError("No products found");
+            setError("Ingen produkter");
           } else {
             setProduct(data.data); 
           }
@@ -61,7 +61,7 @@ useEffect(() => {
                </div>
             ))
         ) : (
-          <p>No product available</p>
+          <p>Ingen produkter fundet</p>
         )}
     </section>
   )

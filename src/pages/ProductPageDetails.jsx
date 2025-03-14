@@ -28,7 +28,7 @@ const {userData} = useContext(UserContext)
     <Separator />
     {userData ? (
   <>
-    <MessageInput /> 
+    <MessageInput setComment={setComment}/> 
     <Comment comment={comment} />
   </>
 ) : (

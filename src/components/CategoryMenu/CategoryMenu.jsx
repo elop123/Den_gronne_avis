@@ -18,7 +18,7 @@ useEffect(() => {
     fetch(url)
       .then((res) => {
         if (!res.ok) {
-          throw new Error("Failed to fetch catgory menu");
+          throw new Error("Kunne ikke hente kategorimenu");
         }
         return res.json();
       })
@@ -26,7 +26,7 @@ useEffect(() => {
         console.log("Data:", data); 
 
         if (!data ) {
-            setError("No category meny found");
+            setError("Ingen kategori menu");
           } else {
             setCategoryMenu(data.data); 
           }
@@ -55,7 +55,7 @@ useEffect(() => {
                 </ul> 
             ))
         ) : (
-          <p>No category menu available</p>
+          <p>Ingen kategori menu</p>
         )}
     </section>
   )

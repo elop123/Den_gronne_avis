@@ -32,7 +32,6 @@
     padding: 10px;
     background-color: $lightGray;
     margin-bottom: 1rem;
-   
 }
 .label{
     text-align: left;
@@ -50,11 +49,13 @@
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
-    float: right;
-   
+    float: right;  
 }
 .text{
     padding: 1rem 0px;
+}
+.success{
+    color: green;
 }
 }
 

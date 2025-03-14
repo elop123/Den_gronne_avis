@@ -5,7 +5,6 @@
     gap: 10px;
     width: 78%;
     align-items: flex-end;
-    //text-align: left;
 .commentItem  {
     display: flex;
     flex-direction: column;
@@ -16,7 +15,6 @@
        margin-right: 2.2rem;
     }
 }
-
 .commentText{
     background: #ffffff;
     border: 2px solid $light_green;
@@ -29,10 +27,8 @@
     margin-top: 0.3rem;
     margin-right: 2.5rem;
     text-align: left;
-    
 }
 }
-
 @media(max-width:600px){
     .comment{
         width: 91%;
