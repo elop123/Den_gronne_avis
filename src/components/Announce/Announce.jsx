@@ -98,8 +98,10 @@ return (
     {isWriting &&(
         <form onSubmit={handleSubmit}>
     <div className={style.announce}>
-        <label className={style.label}>Titel</label>
+        <label htmlFor="title" className={style.label}>Titel</label>
         <input type="text"
+                id="title"  
+                name="title"
                placeholder='Titel på dit produkt...'
                value={title}
                onChange={(e)=>setTitle(e.target.value)}
@@ -107,8 +109,10 @@ return (
     </div>
 
     <div className={style.announce}>
-    <label className={style.label}>Kategori</label>
+    <label htmlFor="category" className={style.label}>Kategori</label>
           <select
+            id="category"
+            name="category"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             className={style.input}
@@ -122,8 +126,9 @@ return (
           </select>
     </div>
     <div className={style.announce}>
-        <label className={style.label}>Announce text</label>
-        <textarea name="text" id="text" 
+        <label htmlFor="description" className={style.label}>Announce text</label>
+        <textarea name="description" 
+                  id="description" 
                   value={description} 
                   placeholder='Skriv en announce tekst her der beskriver produktet...'
                   onChange={(e)=>setDescription(e.target.value)}
@@ -131,19 +136,21 @@ return (
         </textarea>
     </div>
     <div className={style.announce}>
-        <label className={style.label}>URL til billede</label>
+        <label htmlFor="url" className={style.label}>URL til billede</label>
         <input type="text"
                id="url"
+               name="url"
                placeholder='Har du et billede som ligger på nettet kan du indsætte un URL her...'
-               value={url }
+               value={url}
                onChange={(e)=>setUrl(e.target.value)}
             className={style.input} />
     </div>
     <div className={style.announce}>
-        <label className={style.label}>Pris</label>
+        <label htmlFor="price" className={style.label}>Pris</label>
         <input type="text"
                placeholder='Pris...'
                id="price"
+               name="price"
                value={price}
                onChange={(e)=>setPrice(e.target.value)}
             className={style.input} />
