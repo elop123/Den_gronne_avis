@@ -23,7 +23,7 @@ useEffect(() => {
         return res.json();
       })
       .then((data) => {
-        console.log("Data:", data); 
+        //console.log("Data:", data); 
 
         if (!data ) {
             setError("Ingen kategori menu");

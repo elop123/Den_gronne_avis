@@ -28,16 +28,16 @@ if (!newComment) {
 
     const options = {
       method: 'POST',
-      body: JSON.stringify(body),
+      body: new URLSearchParams({ comment: newComment }),
       headers: {
-        'Content-Type': "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
         Authorization: `Bearer ${userData?.access_token}`,
       },
     };
 
 
     try {
-        const response = await fetch("http://localhost:4242/comment/${productId}", options);
+        const response = await fetch(`http://localhost:4242/comment/${productId}`, options);
         const data = await response.json();
 
         console.log("Server Response:", data);
@@ -46,7 +46,9 @@ if (!newComment) {
             setMessage("Dit kommentarer tilføjet ");
             setError(""); 
             setNewComment(""); 
-            updateComments((prevComments) => [...prevComments, data.data]); 
+            updateComments((prevComments) => {
+            return [...prevComments, data.data]; 
+            });
             console.log(" Comment added:", data);
         } else {
             setError(data.message || "Noget gik galt. Prøv igen.");

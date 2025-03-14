@@ -22,7 +22,7 @@ useEffect(() => {
         return res.json();
       })
       .then((data) => {
-        console.log("Data:", data); 
+       // console.log("Data:", data); 
 
         if (!data || !data.data ){
             setError("Ingen produkt fundet");
@@ -30,7 +30,7 @@ useEffect(() => {
           } else {
             setProductById(data.data); 
             setComment(data.data.comments || [])
-            console.log(data.data)
+            //console.log(data.data)
           }
         })
       .catch((err) => setError(err.message))

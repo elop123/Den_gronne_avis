@@ -91,7 +91,7 @@ return (
    <section className={style.announceBox}>
     <h2 className={style.title}>Opret ny announce</h2>
     <h3 className={style.subtitle}>Her kan du oprette en ny announce.</h3>
-    <h3 className={style.subtitle}>Du har mulighed for at slette dine annoncer igen under “min konto” siden</h3>
+    
     {error && <p className={style.error}>{error}</p>}
     {message && <p className={style.success}>{message}</p>}
 
