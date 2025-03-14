@@ -42,7 +42,7 @@ if (!email) {
   fetch(url, options)
     .then((res) => {
       if (!res.ok) {
-        throw new Error('Forkert email eller adgangskode');
+        throw new Error('Forkert email eller adgangskode')
       }
       return res.json();
     })
