@@ -94,7 +94,7 @@ export const SignUp = () => {
     {isSignUp &&(
     <form onSubmit={handleSubmit}>
     <div className={style.signUp}>
-        <label htmlFor="" className={style.label}>Email</label>
+        <label htmlFor="email" className={style.label}>Email</label>
         <input type="email"
             placeholder='Din email...'
             id="email"

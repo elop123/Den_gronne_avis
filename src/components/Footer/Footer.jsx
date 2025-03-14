@@ -38,7 +38,6 @@ const handleSubmit = () => {
           de seneste klima opdateringer direkte i din indbakke</p>
         <div className={style.inputSection}>
         <input type="email" 
-               id="email"
                name="email"
                className={style.newsInput}
                value={email}
