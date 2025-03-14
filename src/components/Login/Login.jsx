@@ -50,23 +50,22 @@ if (!email) {
       // Check if the access_token exists in the response
       if (data.data?.access_token) {
         setUserData(data.data);
-        //setMessage(`Du er nu logget ind. Velkommen tilbage ${data.user.firstname}`);
         setError('');
         navigate('/myaccount');
       } else {
         setError('Forkert email eller adgangskode');
-        //setMessage('');
+       
       }
     })
     .catch((err) => {
       setError(err.message || 'Der opstod en fejl');
-      //setMessage('');
+     
     });
 };
 
   return (
    <section className={style.loginBox}>
-    <h2 className={style.title}>Velkommen tilbage</h2>
+    <h2 className={style.title}>Login</h2>
     <form onSubmit={handleLogin}>
     <div className={style.loginOne}>
         <label htmlFor="" className={style.label}>Email</label>
