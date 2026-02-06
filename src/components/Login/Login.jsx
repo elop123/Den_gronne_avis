@@ -13,11 +13,12 @@ const [error, setError] = useState('')
 // Destructure setUserData from UserContext
 const { setUserData } = useContext(UserContext);
 const navigate = useNavigate();
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4242";
 
 const handleLogin = async (e) => {
   e.preventDefault();
 
-const url= `http://localhost:4242/login`;
+const url= `${API_BASE_URL}/login`;
 
 if (!email) {
     setError('Indtast din email');

@@ -16,9 +16,11 @@ const [categories, setCategories] = useState([])
   
 const { userData, setUserData } = useContext(UserContext);
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4242";
+
 // Fetch categories from API
 useEffect(() => {
-    fetch("http://localhost:4242/categories")
+    fetch(`${API_BASE_URL}/categories`)
       .then((res) => res.json())
       .then((data) => {
         if (data && data.data) {
@@ -61,7 +63,7 @@ useEffect(() => {
 
 
     try {
-        const response = await fetch("http://localhost:4242/products", options);
+        const response = await fetch(`${API_BASE_URL}/products`, options);
         const data = await response.json();
 
        // console.log("Server Response:", data);

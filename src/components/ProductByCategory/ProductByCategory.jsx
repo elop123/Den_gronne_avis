@@ -11,8 +11,9 @@ const [error, setError] = useState(null);
 const {slug} = useParams();
 
 const navigate= useNavigate();
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4242";
 
-const url = `http://localhost:4242/products/category/${slug}`;
+const url = `${API_BASE_URL}/products/category/${slug}`;
 
 useEffect(() => {
     fetch(url)

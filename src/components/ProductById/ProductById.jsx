@@ -9,8 +9,9 @@ const [productById, setProductById] = useState(null);
 const [loading, setLoading] = useState(true);
 const [error, setError] = useState(null);
 const {slug} = useParams();
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4242";
 
-const url = `http://localhost:4242/products/${slug}`;
+const url = `${API_BASE_URL}/products/${slug}`;
 
 useEffect(() => {
     fetch(url)

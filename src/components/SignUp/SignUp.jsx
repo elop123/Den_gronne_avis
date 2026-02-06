@@ -18,7 +18,8 @@ export const SignUp = () => {
     const [isChecked, setIsChecked] = useState(false)
 
   const { userData, setUserData } = useContext(UserContext);
-
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4242";
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError('');
@@ -58,7 +59,7 @@ export const SignUp = () => {
 
 
     try {
-        const response = await fetch("http://localhost:4242/users", options);
+        const response = await fetch(`${API_BASE_URL}/users`, options);
         const data = await response.json();
 
         //console.log("Server Response:", data);

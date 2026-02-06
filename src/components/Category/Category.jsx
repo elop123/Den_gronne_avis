@@ -10,8 +10,9 @@ const[loading, setLoading] = useState(true);
 const[error, setError] = useState(null);
 
 const navigate= useNavigate();
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4242";
 
-const url=`http://localhost:4242/categories`;
+const url=`${API_BASE_URL}/categories`;
 
 useEffect(() => {
     fetch(url)

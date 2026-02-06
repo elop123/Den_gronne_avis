@@ -10,6 +10,7 @@ const [error, setError] = useState("")
 const [message, setMessage] = useState("")
 
 const { userData } = useContext(UserContext);
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4242";
 
 const handleSubmit = async (event) => {
     event.preventDefault();
@@ -37,7 +38,7 @@ if (!newComment) {
 
 
     try {
-        const response = await fetch(`http://localhost:4242/comment/${productId}`, options);
+        const response = await fetch(`${API_BASE_URL}/comment/${productId}`, options);
         const data = await response.json();
 
         console.log("Server Response:", data);
