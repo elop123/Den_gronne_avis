@@ -3,7 +3,7 @@
 A modern, responsive web application inspired by classified marketplaces, built with a focus on **component-based architecture** and **clean UI**.
 
 ##  Live Demo
-[LINK_TO_YOUR_VERCEL_OR_NETLIFY_DEPLOYMENT_HERE]
+https://elop123.github.io/Den_gronne_avis/
 
 
 ## 🛠 Tech Stack
